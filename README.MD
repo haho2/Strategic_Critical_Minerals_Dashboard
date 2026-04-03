@@ -15,16 +15,24 @@ pip freeze > requirements.txt
 
 예시 `requirements.txt`
 ```txt
-streamlit
-pandas
-sqlalchemy
-pymysql
-plotly
-requests
-beautifulsoup4
-python-dateutil
-konlpy
-lxml
+beautifulsoup4==4.14.3
+folium==0.20.0
+konlpy==0.6.0
+numpy==2.4.3
+openpyxl
+pandas==2.3.3
+plotly==6.6.0
+PyMySQL==1.1.2
+requests==2.32.5
+smmap==5.0.3
+SQLAlchemy==2.0.48
+streamlit==1.55.0
+streamlit-folium==0.27.0
+toml==0.10.2
+urllib3==2.6.3
+streamlit-autorefresh
+dotenv
+
 ```
 
 ## MySQL DB 준비
@@ -37,13 +45,18 @@ COLLATE utf8mb4_unicode_ci;
 
 2) 기본 데이터 예시
 ```sql
-INSERT INTO minerals (mineral_id, mineral_name, category) VALUES
-(1, '리튬', '핵심광물'),
-(2, '니켈', '핵심광물'),
-(3, '코발트', '핵심광물'),
-(4, '망간', '핵심광물'),
-(5, '흑연', '핵심광물'),
-(11, '희토류', '희토류');
+INSERT INTO minerals (mineral_name, category) VALUES 
+('리튬', '이차전지 광물'),
+('니켈', '이차전지 광물'),
+('코발트', '이차전지 광물'),
+('망간', '이차전지 광물'),
+('흑연', '이차전지 광물'),
+('네오디뮴', '희토류'),
+('디스프로슘', '희토류'),
+('터븀', '희토류'),
+('세륨', '희토류'),
+('란탄', '희토류'),
+('희토류', '희토류');
 ```
 
 ## 프로젝트 폴더 구조
@@ -53,7 +66,13 @@ mineral_dashboard/
 ├─ main.py
 ├─ README.md
 ├─ DB.py
-├─ config.toml
+├─ requirements.txt
+├─ packeges.txt
+├─ .gitignore
+├─ .env.example
+│
+├─ .streamlit
+│  ├─ config.toml
 │
 ├─ utils/
 │  ├─ draw_news.py
@@ -64,6 +83,7 @@ mineral_dashboard/
 │  ├─ mineral_import_sync.py
 │  ├─ mineral_price_sync.py
 │  └─ news_sync.py
+│  └─ all_minerals...
 │
 ├─ css_def/
 │  ├─ dashboard_css
@@ -87,11 +107,11 @@ conda activate streamlit
 
 ```python
 db_config = {
-    "host": "RDS_ENDPOINT",
+    "host": host,
     "port": 3306,
-    "user": "USER",
-    "password": "PASSWORD",
-    "db": "datax",
+    "user": user,
+    "password": password,
+    "db": db,
     "charset": "utf8mb4"
 }
 ```
