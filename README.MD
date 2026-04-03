@@ -1,6 +1,6 @@
 ## 시연
 ```url
-https://strategiccriticalmineralsdashboard.streamlit.app/
+[https://strategiccriticalmineralsdashboard.streamlit.app/](https://strategiccriticalmineralsdashboard.streamlit.app/)
 ```
 
 
