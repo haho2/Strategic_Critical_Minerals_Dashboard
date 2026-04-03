@@ -1,4 +1,8 @@
-# 시연
+# Strategic Critical Minerals Dashboard
+전략 핵심 광물의 글로벌 공급망 현황과 시장 데이터를 한눈에 파악할 수 있는 인터랙티브 대시보드입니다.
+
+
+## 시연
 [https://strategiccriticalmineralsdashboard.streamlit.app/](https://strategiccriticalmineralsdashboard.streamlit.app/)
 
 
