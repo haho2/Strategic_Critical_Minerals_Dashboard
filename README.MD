@@ -1,3 +1,10 @@
+## 시연
+```url
+https://strategiccriticalmineralsdashboard.streamlit.app/
+```
+
+
+
 ## 필요한 라이브러리 설치
 ```bash
 pip install streamlit pandas sqlalchemy pymysql plotly requests beautifulsoup4 python-dateutil konlpy streamlit_autorefresh
