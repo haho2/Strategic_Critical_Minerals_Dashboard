@@ -1,0 +1,132 @@
+.hot-topic-link {
+    display: block;
+    width: 100%;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.hot-topic-card {
+    background: linear-gradient(90deg, #171B24 0%, #1B1F28 100%);
+    border-radius: 14px;
+    padding: 18px 14px;
+    margin-bottom: 8px;
+    border: 1px solid #2D333D;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 68px;
+    gap: 0;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    cursor: pointer;
+}
+
+.hot-topic-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+    border-color: #42506A;
+}
+
+.hot-rank-wrap {
+    flex: 0 0 38px;
+    text-align: center;
+    border-right: 1px solid #313846;
+    margin-right: 10px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+}
+
+.hot-rank {
+    font-size: 24px;
+    font-weight: 400;
+    color: #F3F4F6;
+    line-height: 1;
+}
+
+.hot-name-wrap {
+    flex: 0 0 110px;
+    min-width: 110px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.hot-name-line {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.hot-name {
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    line-height: 1;
+}
+
+.hot-en {
+    font-size: 10px;
+    color: #D1D5DB;
+    margin-left: 6px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.hot-meta-wrap {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hot-row {
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.hot-row + .hot-row {
+    margin-top: 5px;
+}
+
+.hot-label {
+    color: #A3AAB8;
+    width: 58px;
+    flex: 0 0 58px;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.hot-score {
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.hot-keywords {
+    color: #E5E7EB;
+    font-weight: 400;
+    font-size: 10px;
+    word-break: keep-all;
+    line-height: 1.25;
+}
+
+.hot-empty-state {
+    color: #A3AAB8;
+    font-size: 13px;
+    padding: 14px 6px;
+}
+
+.hot-topics-wrap {
+    background-color: transparent;
+    font-family: Pretendard, Arial, sans-serif;
+    color: white;
+    box-sizing: border-box;
+    overflow: visible;
+    padding-top: 2px;
+    padding-bottom: 0;
+}

@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: visible;
+}
+
+.plot-wrap {
+    width: 100%;
+    height: __HEIGHT__;
+    position: relative;
+    background: transparent;
+    overflow: visible;
+}
+
+.plot-wrap .js-plotly-plot,
+.plot-wrap .plot-container,
+.plot-wrap .svg-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.plot-wrap .modebar {
+    top: 4px !important;
+    right: 6px !important;
+    left: auto !important;
+    background: transparent !important;
+    z-index: 1000 !important;
+    opacity: 1 !important;
+    transform: scale(0.9);
+    transform-origin: top right;
+}
+
+.plot-wrap .modebar-group {
+    background: rgba(20, 24, 31, 0.92) !important;
+    border: 1px solid rgba(255,255,255,0.10) !important;
+    border-radius: 8px !important;
+    margin-left: 4px !important;
+}
+
+.plot-wrap .modebar-btn {
+    opacity: 1 !important;
+}
+
+.plot-wrap .modebar-btn svg {
+    fill: #D7DBE3 !important;
+}

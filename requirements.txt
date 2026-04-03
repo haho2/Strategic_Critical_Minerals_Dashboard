@@ -1,0 +1,16 @@
+beautifulsoup4==4.14.3
+folium==0.20.0
+konlpy==0.6.0
+numpy==2.4.3
+openpyxl
+pandas==2.3.3
+plotly==6.6.0
+PyMySQL==1.1.2
+requests==2.32.5
+smmap==5.0.3
+SQLAlchemy==2.0.48
+streamlit==1.55.0
+streamlit-folium==0.27.0
+toml==0.10.2
+urllib3==2.6.3
+dotenv
