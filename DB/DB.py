@@ -1,16 +1,28 @@
 import os
 import pymysql
+import streamlit as st
 from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SSL_CERT_PATH = os.path.join(BASE_DIR, "global-bundle.pem")
 dotenv_path = os.path.join(BASE_DIR, ".env")
 
-load_dotenv(dotenv_path)
-host = os.getenv("HOST")
-user = os.getenv("USER")
-password = os.getenv("PASSWORD")
-db = os.getenv("DB")
+try:
+    host = st.secrets["HOST"]
+    user = st.secrets["USER"]
+    password = st.secrets["PASSWORD"]
+    db = st.secrets["DB"]
+    
+    print(f"성공적으로 가져온 HOST: {host[:10]}...") # 로그 확인용
+except KeyError as e:
+    st.error(f"Secrets 키를 찾을 수 없습니다: {e}")
+    load_dotenv(dotenv_path)
+    host = os.getenv("HOST")
+    user = os.getenv("USER")
+    password = os.getenv("PASSWORD")
+    db = os.getenv("DB")
+
+
 
 
 print(f"현재 BASE_DIR: {BASE_DIR}")
